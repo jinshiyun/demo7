@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con div {
+            height: 60px;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+        .con div:nth-child(1) {
+            background-color: red;
+        }
+        .con div:nth-child(2) {
+            background-color: blue;
+        }
+        .con div:nth-child(3) {
+            background-color: black;
+        }
+        .con div:nth-child(4) {
+            background-color: orange;
+        }
+
+        @media screen and (min-width:1200px) {
+            .con {
+                display: flex;
+            }
+            .con div {
+                width: 25%;
+            }
+        }
+
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .con {
+                display: inline-flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .con div:nth-child(1) {
+                width: 1050px;
+            }
+            .con div:nth-child(2) {
+                width: 350px;
+            }
+            .con div:nth-child(3) {
+                width: 350px;
+            }
+            .con div:nth-child(4) {
+                width: 350px;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .con {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .con div {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .con div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
